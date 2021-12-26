@@ -1,0 +1,37 @@
+{
+    "vetur.format.defaultFormatter.html": "prettier",
+    "typescript.validate.enable": true,
+    "javascript.validate.enable": true,
+    "diagnostic.hintSign": "ஐ",
+    "diagnostic.errorSign": "•",
+    "diagnostic.warningSign": "•",
+    "diagnostic.infoSign": "•",
+    "diagnostic.enable": true,
+    "diagnostic.refreshOnInsertMode": true,
+    "coc.preferences.formatOnSaveFiletypes": [],
+    "diagnostic.virtualText": true,
+    "diagnostic.enableMessage": "always",
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.messageDelay": 1000,
+    "eslint.run": "onType",
+    "eslint.trace.server": "verbose",
+    "eslint.autoFixOnSave": true,
+    "eslint.quiet": false,
+    "eslint.options": {
+        "eslint.executeAutofix": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "languageserver": {
+      "haskell": {
+        "command": "haskell-language-server-wrapper",
+        "args": ["--lsp"],
+        "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+        "filetypes": ["haskell", "lhaskell"]
+      }
+    }
+}

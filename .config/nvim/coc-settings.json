@@ -14,12 +14,9 @@
     "diagnostic.checkCurrentLine": true,
     "diagnostic.messageDelay": 1000,
     "eslint.run": "onType",
-    "eslint.trace.server": "verbose",
+    "eslint.trace.server": "off",
     "eslint.autoFixOnSave": true,
-    "eslint.quiet": false,
-    "eslint.options": {
-        "eslint.executeAutofix": true
-    },
+    "eslint.quiet": true,
     "eslint.validate": [
         "javascript",
         "javascriptreact",

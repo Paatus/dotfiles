@@ -23,8 +23,8 @@ function! s:show_hover_doc()
   silent! call timer_start(500, 'ShowDocIfNoDiagnostic')
 endfunction
 
-" autocmd CursorHoldI * silent! call <SID>show_hover_doc()
-" autocmd CursorHold * silent! call <SID>show_hover_doc()
+autocmd CursorHoldI * silent! call <SID>show_hover_doc()
+autocmd CursorHold * silent! call <SID>show_hover_doc()
 
 autocmd CursorHoldI * silent! call CocActionAsync('highlight')
 autocmd CursorHold * silent! call CocActionAsync('highlight')

@@ -1,6 +1,7 @@
 " ==================================================== PLUGINS ========================================================
 call plug#begin('~/.config/nvim/plugins')
 
+Plug 'jparise/vim-graphql'
 Plug 'pangloss/vim-javascript'
 Plug 'wincent/terminus'
 Plug 'chriskempson/base16-vim'

@@ -16,7 +16,6 @@
     "eslint.run": "onType",
     "eslint.trace.server": "off",
     "eslint.autoFixOnSave": true,
-    "eslint.quiet": true,
     "eslint.validate": [
         "javascript",
         "javascriptreact",

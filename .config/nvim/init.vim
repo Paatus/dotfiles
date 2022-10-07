@@ -10,7 +10,6 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'TaDaa/vimade'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'tmhedberg/matchit'
@@ -22,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'tversteeg/registers.nvim', { 'branch': 'main' }
+
+Plug 'savq/melange'
+
 
 call plug#end()
 
@@ -40,7 +42,7 @@ for f in split(glob('~/.config/nvim/config/plugins/*.vim'), '\n')
     exe 'source' f
 endfor
 
-colorscheme nordfox
+colorscheme melange
 
 " Automatically reload this file when it gets written
 au BufWritePost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim

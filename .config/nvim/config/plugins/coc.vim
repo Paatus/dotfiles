@@ -14,7 +14,7 @@ nmap <silent> <leader>i <Plug>(coc-implementation)
 " command! -nargs=0 Tsc :call CocAction('runCommand', 'tsserver.watchBuild')
 
 function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#float#has_float() == 0 && CocHasProvider('hover'))
+   if (CocHasProvider('hover'))
     silent! call CocActionAsync('doHover')
   endif
 endfunction
@@ -34,3 +34,5 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

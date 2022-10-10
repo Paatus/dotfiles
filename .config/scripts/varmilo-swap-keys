@@ -1,0 +1,9 @@
+# Swap left alt and super keys
+xmodmap -e 'remove mod1 = Alt_L'
+xmodmap -e 'remove mod4 = Super_L'
+xmodmap -e 'add mod1 = Super_L'
+xmodmap -e 'add mod4 = Alt_L'
+
+# Swap Right super and alt
+setxkbmap -option altwin:swap_alt_win
+setxkbmap -option lv3:rwin_switch

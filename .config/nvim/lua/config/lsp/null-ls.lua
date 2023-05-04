@@ -16,7 +16,7 @@ null_ls.setup({
     code_actions.eslint_d,
   },
   on_attach = function(client)
-    local group = vim.api.nvim_create_augroup("Eslint", {})
+    local group = vim.api.nvim_create_augroup("eslint_d", {})
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = group,
       pattern = "",

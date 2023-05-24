@@ -20,7 +20,7 @@ keymap("n", "<C-Up>", "<C-w>k", opts)
 keymap("n", "<C-Down>", "<C-w>j", opts)
 
 keymap("n", '<leader>s', ":source ~/.config/nvim/init.lua<CR>", opts)
-keymap("n", '<leader><leader>', ":FzfLua git_files --cached --others --exclude-standard<CR>", opts)
+keymap("n", '<leader><leader>', ":lua require('fzf-lua').git_files({ cmd = 'git ls-files --cached --other --exclude-standard' })<CR>", { noremap = true, silent = true })
 keymap("n", '<Leader>b', ":FzfLua buffers<CR>", opts)
 
 -- Toggle File menu with F3

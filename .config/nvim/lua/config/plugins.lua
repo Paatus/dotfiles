@@ -35,6 +35,9 @@ return packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter")
   use("kyazdani42/nvim-web-devicons")
   use("nvim-lualine/lualine.nvim")
+  use("kdheepak/tabline.nvim")
+  use({'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'})
+
   use("kyazdani42/nvim-tree.lua")
   use("nvim-telescope/telescope.nvim")
 
@@ -79,6 +82,8 @@ return packer.startup(function(use)
   })
 
   use('akinsho/bufferline.nvim', { version = "v3.*", requires = 'nvim-tree/nvim-web-devicons' })
+
+  use("folke/trouble.nvim", { requires = "nvim-tree/nvim-web-devicons" })
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

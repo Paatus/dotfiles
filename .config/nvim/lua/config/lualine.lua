@@ -7,6 +7,7 @@ if not status_ok then
   return
 end
 
+vim.opt.termguicolors = true
 bufferline.setup({
   options = {
     name_formatter = function(buf) 

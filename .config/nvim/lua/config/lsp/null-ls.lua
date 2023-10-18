@@ -14,6 +14,7 @@ null_ls.setup({
     diagnostics.eslint_d,
     formatters.eslint_d,
     code_actions.eslint_d,
+    formatters.elm_format,
   },
   on_attach = function(client)
     local group = vim.api.nvim_create_augroup("eslint_d", {})

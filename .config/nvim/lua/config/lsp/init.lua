@@ -14,7 +14,6 @@ local servers = {
   "prismals",
   "svelte",
   "tailwindcss",
-  "volar",
   "yamlls",
   "eslint",
   "elmls"
@@ -28,6 +27,8 @@ require("nvim-lsp-installer").setup({
 -- Initialise cmp lsp autocompletion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+capabilities.textDocument.foldingRange = { dynamicRegistration = false, lineFoldingOnly = true }
+
 
 local lspconfig = require("lspconfig")
 
@@ -52,7 +53,7 @@ local config = {
   underline = true,
   severity_sort = true,
   float = {
-    focusable = false,
+    focusable = true,
     style = "minimal",
     border = "rounded",
     source = "always",

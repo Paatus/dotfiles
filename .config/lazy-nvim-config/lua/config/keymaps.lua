@@ -23,7 +23,7 @@ keymap("n", "<C-Up>", "<C-w>k", opts)
 keymap("n", "<C-Down>", "<C-w>j", opts)
 
 -- keymap("n", "<leader>s", ":source ~/.config/nvim/init.lua<CR>", opts)
-keymap("n", '<leader><leader>', ":lua require('fzf-lua').git_files({ cmd = 'git ls-files --cached --other --exclude-standard' })<CR>", { noremap = true, silent = true })
+keymap("n", '<leader><leader>', ":lua require('telescope.builtin').git_files({ show_untracked = true })<CR>", { noremap = true, silent = true })
 keymap("n", "<Leader>b", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", opts)
 
 -- Toggle File menu with F3

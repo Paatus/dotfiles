@@ -10,25 +10,25 @@ end
 vim.opt.termguicolors = true
 bufferline.setup({
   options = {
-    name_formatter = function(buf) 
-      -- buf contains:
-      -- name                | str        | the basename of the active file
-      -- path                | str        | the full path of the active file
-      -- bufnr (buffer only) | int        | the number of the active buffer
-      -- buffers (tabs only) | table(int) | the numbers of the buffers in the tab
-      -- tabnr (tabs only)   | int        | the "handle" of the tab, can be converted to its ordinal number using: `vim.api.nvim_tabpage_get_number(buf.tabnr)`
-      local ret = ""
-      local path = string.gsub(buf.path, buf.name, "")
-      local parts = {}
-      for i in string.gmatch(path, "[^/]+") do
-          parts[#parts + 1] = i
-      end
-      for i = #parts-1, #parts do
-          local part = parts[i]
-          ret = ret .. string.sub(part, 1, 1) .. '/'
-      end
-      return ret .. buf.name
-    end,
+    -- name_formatter = function(buf)_
+    --   -- buf contains:
+    --   -- name                | str        | the basename of the active file
+    --   -- path                | str        | the full path of the active file
+    --   -- bufnr (buffer only) | int        | the number of the active buffer
+    --   -- buffers (tabs only) | table(int) | the numbers of the buffers in the tab
+    --   -- tabnr (tabs only)   | int        | the "handle" of the tab, can be converted to its ordinal number using: `vim.api.nvim_tabpage_get_number(buf.tabnr)`
+    --   local ret = ""
+    --   local path = string.gsub(buf.path, buf.name, "")
+    --   local parts = {}
+    --   for i in string.gmatch(path, "[^/]+") do
+    --       parts[#parts + 1] = i
+    --   end
+    --   for i = #parts-1, #parts do
+    --       local part = parts[i]
+    --       ret = ret .. string.sub(part, 1, 1) .. '/'
+    --   end
+    --   return ret .. buf.name
+    -- end,
     diagnostics = "nvim_lsp",
   }
 })

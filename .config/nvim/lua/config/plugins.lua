@@ -32,11 +32,12 @@ return packer.startup(function(use)
   use("Mofiqul/vscode.nvim")
   use("tiagovla/tokyodark.nvim")
   use("catppuccin/nvim")
-  use("nvim-treesitter/nvim-treesitter")
+  use("nvim-treesitter/nvim-treesitter", { run = "TSUpdate" })
   use("kyazdani42/nvim-web-devicons")
   use("nvim-lualine/lualine.nvim")
   use("kdheepak/tabline.nvim")
-  use({'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'})
+  -- use({'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'})
+  use('akinsho/bufferline.nvim', { version = "v3.*", requires = 'nvim-tree/nvim-web-devicons' })
 
   use("kyazdani42/nvim-tree.lua")
   use("nvim-telescope/telescope.nvim")
@@ -81,7 +82,6 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' }
   })
 
-  use('akinsho/bufferline.nvim', { version = "v3.*", requires = 'nvim-tree/nvim-web-devicons' })
 
   use("folke/trouble.nvim", { requires = "nvim-tree/nvim-web-devicons" })
 

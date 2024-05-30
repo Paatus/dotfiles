@@ -163,3 +163,8 @@ stagingtoken () {
     PASSWORD=$(op item get kqwetq5nyn2lkvr2r4l4owv5bu --vault ncnyo2whlfs52y37kqsq3a4iky --fields password)
 	curl -s -XPOST "https://live.staging.gaf-identity-provider.meltwater.io/login" -H "Content-Type: application/json" -d '{ "email": "pontus.hjortskog@meltwater.com", "password": "'${PASSWORD}'" }' | jq -r .
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

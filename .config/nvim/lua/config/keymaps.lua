@@ -27,7 +27,7 @@ keymap("n", '<Leader>b', ":FzfLua buffers<CR>", opts)
 keymap("n", "<F3>", ":NvimTreeFindFileToggle<CR>", opts)
 
 -- Open silver-searcher with backspace
-keymap("n", "\\", ":Ag ", opts)
+keymap("n", "\\", ":Telescope live_grep<CR> ", opts)
 
 -- Move between open buffers with Tab/Shift-tab
 -- keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)

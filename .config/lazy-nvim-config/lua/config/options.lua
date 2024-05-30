@@ -8,4 +8,5 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = nil
 vim.opt.autochdir = false
 vim.opt.clipboard=""
+vim.opt.backupcopy="yes"
 

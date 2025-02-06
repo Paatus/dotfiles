@@ -102,7 +102,7 @@ export EDITOR=nvim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVIM_APPNAME="lazy-nvim-config"
+# export NVIM_APPNAME="lazy-nvim-config"
 # alias v="TMPDIR=~/.config/nvim/tmp nvim"
 # alias nvim="NVIM_APPNAME=lazy-nvim-config nvim"
 alias nvim_old="NVIM_APPNAME=nvim nvim"
@@ -148,7 +148,7 @@ maybeLogin () {
     op account get >/dev/null 2&>/dev/null
     hasErr=$?
     if [ $hasErr -eq 1 ]; then
-      eval $(op signin --account meltwater.1password.eu)
+      eval $(op signin)
     fi
 }
 
@@ -167,4 +167,9 @@ stagingtoken () {
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
 

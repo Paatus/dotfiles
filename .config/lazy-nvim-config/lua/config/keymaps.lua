@@ -24,13 +24,14 @@ keymap("n", "<C-Down>", "<C-w>j", opts)
 
 -- keymap("n", "<leader>s", ":source ~/.config/nvim/init.lua<CR>", opts)
 keymap("n", '<leader><leader>', ":lua require('telescope.builtin').git_files({ show_untracked = true })<CR>", { noremap = true, silent = true })
-keymap("n", "<Leader>b", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", opts)
+keymap("n", "<Leader>b", ":lua require('telescope.builtin').buffers({ sort_mru=true, sort_lastused=true })<cr>", opts)
 
 -- Toggle File menu with F3
 keymap("n", "<F3>", ":Neotree toggle<CR>", opts)
 
 -- Open silver-searcher with backspace
-keymap("n", "\\", ":Telescope live_grep<CR>", opts)
+-- keymap("n", "\\", ":Telescope live_grep<CR>", opts)
+keymap("n", "\\", ":lua require('telescope.builtin').live_grep()<cr>", opts)
 
 -- Repeats visual selection after indent/dedent
 keymap("v", "<", "<gv", opts)

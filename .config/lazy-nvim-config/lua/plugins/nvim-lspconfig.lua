@@ -18,4 +18,14 @@ return {
     keys[#keys + 1] = { "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", opts }
     keys[#keys + 1] = { "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts }
   end,
+  opts = {
+    servers = {
+      eslint = {
+        settings = {
+          -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+          workingDirectories = { mode = "location" },
+        },
+      },
+    },
+  }
 }

@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+if [[ $1 ]];
+then
+  desks_on_current=`bspc query -D -m focused`
+  i=1
+  for d in $desks_on_current
+  do 
+    # echo "LOL $d $1 $i"
+    if [[ $1 -eq $i ]]
+    then
+      echo $d
+    fi
+    i=`expr $i + 1`
+  done
+fi

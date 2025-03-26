@@ -73,6 +73,8 @@ ZSH_THEME="wedisagree"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,15 +104,15 @@ export EDITOR=nvim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# export NVIM_APPNAME="lazy-nvim-config"
+export NVIM_APPNAME="lazy-nvim-config"
 # alias v="TMPDIR=~/.config/nvim/tmp nvim"
 # alias nvim="NVIM_APPNAME=lazy-nvim-config nvim"
-alias nvim_old="NVIM_APPNAME=nvim nvim"
-alias v="NVIM_APPNAME=lazy-nvim-config nvim"
+alias v="nvim"
 alias pacman="sudo pacman --color=always"
 alias dots='/usr/bin/git --git-dir=$HOME/Dev/dotfiles.git/ --work-tree=$HOME'
 alias kc="kubectl"
 alias kt="kubetail"
+alias mux="tmuxinator"
 
 kcn() {
     local namespace="$1"

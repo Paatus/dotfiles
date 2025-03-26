@@ -5,5 +5,5 @@ return {
   { "echasnovski/mini.pairs", enabled = false },
   { "rafamadriz/friendly-snippets", enabled = false },
   { "catppuccin/nvim", enabled = false },
-  { "echasnovski/mini.surround", enabled = false }
+  { "echasnovski/mini.surround", enabled = false },
 }
